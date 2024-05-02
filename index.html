@@ -7,6 +7,7 @@
     <title>Instagram Photo Feed with Bootstrap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                 Instagram
             </a>
             <!-- Botao de Verde Create a new post -->
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Create a
+            <button type="button" class="btn btn-success ms-auto me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Create a
                 new post</button>
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -37,23 +38,28 @@
                             <!-- /*caption*/ -->
                             <form>
                                 <div class="mb-3">
-                                  <label for="exampleInputEmail1" class="form-label"><strong>Caption:</strong></label>
-                                  <textarea type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">Add the caption of your post here</textarea>
+                                    <label for="exampleInputEmail1" class="form-label"><strong>Caption:</strong></label>
+                                    <textarea type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">Add the caption of your post here</textarea>
                                 </div>
                                 <!-- Botao da camara -->
                                 <button type="button" class="btn btn-light">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
-                                        <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
-                                        <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"/>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-camera-fill" viewBox="0 0 16 16">
+                                        <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                                        <path
+                                            d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0" />
                                     </svg>
                                 </button>
                                 <!-- Botao da localizacao -->
                                 <button type="button" class="btn btn-light">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                                     </svg>
                                 </button>
-                              </form>
+                            </form>
                         </div>
                         <div class="modal-footer">
                             <!-- Botao de Close -->
@@ -78,88 +84,144 @@
                     <li><a class="dropdown-item" href="#">Profile</a></li>
                     <li><a class="dropdown-item" href="#">Accesibility</a></li>
                     <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- NavBar de selecao entre 3 e 1 fotos -->
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <!-- Botao Selector de grid 3 fotos -->
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-3x3" viewBox="0 0 16 16">
-                    <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5zM1.5 1a.5.5 0 0 0-.5.5V5h4V1zM5 6H1v4h4zm1 4h4V6H6zm-1 1H1v3.5a.5.5 0 0 0 .5.5H5zm1 0v4h4v-4zm5 0v4h3.5a.5.5 0 0 0 .5-.5V11zm0-1h4V6h-4zm0-5h4V1.5a.5.5 0 0 0-.5-.5H11zm-1 0V1H6v4z"/>
-                </svg>
-            </button>
-        </li>
-        <!-- Botao Selector de grid 1 foto -->
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-app" viewBox="0 0 16 16">
-                    <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4z"/>
-                </svg>
-            </button>
-        </li>
-      </ul>
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+    <div class="d-flex justify-content-center">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <!-- Botao Selector de grid 3 fotos -->
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-grid-3x3" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5zM1.5 1a.5.5 0 0 0-.5.5V5h4V1zM5 6H1v4h4zm1 4h4V6H6zm-1 1H1v3.5a.5.5 0 0 0 .5.5H5zm1 0v4h4v-4zm5 0v4h3.5a.5.5 0 0 0 .5-.5V11zm0-1h4V6h-4zm0-5h4V1.5a.5.5 0 0 0-.5-.5H11zm-1 0V1H6v4z" />
+                    </svg>
+                </button>
+            </li>
+            <!-- Botao Selector de grid 1 foto -->
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-app"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4z" />
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+            tabindex="0">
             <!-- primeira linha com disposicao de imagens 3 laterais -->
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-4">
-                        <img src="https://img.freepik.com/fotos-gratis/hora-de-dancar-homens-elegantes-e-mulher-dancando-hip-hop-em-roupas-brilhantes-sobre-fundo-verde-no-salao-de-danca-em-luz-de-neon_155003-16406.jpg?w=996&t=st=1714376013~exp=1714376613~hmac=42b81e281bebe2cfdcababd76658d759d47408cab70860123a338d5a3aee24f9" class="img-thumbnail" alt="hip hop">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between">
+                    <div class="img-container col-4 p-2">
+                        <img src="https://img.freepik.com/fotos-gratis/hora-de-dancar-homens-elegantes-e-mulher-dancando-hip-hop-em-roupas-brilhantes-sobre-fundo-verde-no-salao-de-danca-em-luz-de-neon_155003-16406.jpg?w=996&t=st=1714376013~exp=1714376613~hmac=42b81e281bebe2cfdcababd76658d759d47408cab70860123a338d5a3aee24f9"
+                            class="img-fluid" alt="hip hop">
                     </div>
-                    <div class="col-4">
-                        <img src="https://s2-gshow.glbimg.com/X8xme2IkZqH1WQU8tR0huXxhPew=/0x0:7168x4784/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/s/U/aGbiAxQ3ymjqtY1IrBcw/david-hofmann-xmd4gx8jsxe-unsplash.jpg" class="img-thumbnail" alt="bailarina">
+                    <div class="img-container col-4 p-2">
+                        <img src="https://s2-gshow.glbimg.com/X8xme2IkZqH1WQU8tR0huXxhPew=/0x0:7168x4784/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/s/U/aGbiAxQ3ymjqtY1IrBcw/david-hofmann-xmd4gx8jsxe-unsplash.jpg"
+                            class="img-fluid" alt="bailarina">
                     </div>
-                    <div class="col-4">
-                        <img src="https://blog.samisaude.com.br/wp-content/uploads/2023/06/people-taking-part-dance-therapy-class-1.jpg" class="img-thumbnail" alt="grupo aquecimento">
+                    <div class="img-container col-4 p-2">
+                        <img src="https://blog.samisaude.com.br/wp-content/uploads/2023/06/people-taking-part-dance-therapy-class-1.jpg"
+                            class="img-fluid" alt="grupo aquecimento">
                     </div>
                 </div>
             </div>
             <!-- segunda linha com disposicao de imagens 3 laterais -->
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-4">
-                        <img src="https://oxigenioacademia.com.br/wp-content/uploads/2022/03/post_thumbnail-89f9725e8eef30bca91014144f158259.jpeg" class="img-thumbnail" alt="hip hop">
+                <div class="d-flex justify-content-between">
+                    <div class="img-container col-4 p-2">
+                        <img src="https://oxigenioacademia.com.br/wp-content/uploads/2022/03/post_thumbnail-89f9725e8eef30bca91014144f158259.jpeg"
+                            class="img-fluid" alt="hip hop">
                     </div>
-                    <div class="col-4">
-                        <img src="https://conceito.de/wp-content/uploads/2014/06/ballerinas-1376250_1280.jpg" class="img-thumbnail" alt="bailarina">
+                    <div class="img-container col-4 p-2">
+                        <img src="https://conceito.de/wp-content/uploads/2014/06/ballerinas-1376250_1280.jpg"
+                            class="img-fluid" alt="bailarina">
                     </div>
-                    <div class="col-4">
-                        <img src="https://www.es.gov.br/Media/PortalES/_Profiles/c4d8c6e6/2b07643f/Elementos.jpg?v=637783406393944020" class="img-thumbnail" alt="hip hop">
+                    <div class="img-container col-4 p-2">
+                        <img src="https://www.es.gov.br/Media/PortalES/_Profiles/c4d8c6e6/2b07643f/Elementos.jpg?v=637783406393944020"
+                            class="img-fluid" alt="hip hop">
                     </div>
                 </div>
             </div>
             <!-- terceira linha com disposicao de imagens 3 laterais -->
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-4">
-                        <img src="https://www1.udesc.br/agencia/arquivos/23670/images/grupodanca.jpg" class="img-thumbnail" alt="hip hop">
+                <div class="d-flex justify-content-between">
+                    <div class="img-container col-4 p-2">
+                        <img src="https://www1.udesc.br/agencia/arquivos/23670/images/grupodanca.jpg"
+                            class="img-fluid" alt="hip hop">
                     </div>
-                    <div class="col-4">
-                        <img src="https://cdn-blog.superprof.com/blog_br/wp-content/uploads/2022/09/dancando-estilos-diferentes-aprender.jpg" class="img-thumbnail" alt="bailarina">
+                    <div class="img-container col-4 p-2">
+                        <img src="https://cdn-blog.superprof.com/blog_br/wp-content/uploads/2022/09/dancando-estilos-diferentes-aprender.jpg"
+                            class="img-fluid" alt="bailarina">
                     </div>
-                    <div class="col-4">
-                        <img src="https://www.evidenceballet.com.br/wp-content/uploads/2017/12/148601-x-acessorios-essenciais-para-apaixonados-por-danca-de-salao.jpg" class="img-thumbnail" alt="hip hop">
+                    <div class="img-container col-4 p-2">
+                        <img src="https://www.evidenceballet.com.br/wp-content/uploads/2017/12/148601-x-acessorios-essenciais-para-apaixonados-por-danca-de-salao.jpg"
+                            class="img-fluid" alt="hip hop">
                     </div>
                 </div>
             </div>
         </div>
         <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
             <!-- imagens de grid 1x1 -->
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <p class="card-text"><strong>Hip Hop no seu estado mais puro</strong></p>
-                  </div>
-                <img src="https://img.freepik.com/fotos-gratis/hora-de-dancar-homens-elegantes-e-mulher-dancando-hip-hop-em-roupas-brilhantes-sobre-fundo-verde-no-salao-de-danca-em-luz-de-neon_155003-16406.jpg?w=996&t=st=1714376013~exp=1714376613~hmac=42b81e281bebe2cfdcababd76658d759d47408cab70860123a338d5a3aee24f9" class="card-img-top" alt="bailarina">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
+            <div class="d-flex justify-content-center">
+                <div class="card" style="width: 47rem;">
+                    <div class="card-body d-flex p-3">
+                        <p class="card-text"><h4>Hip Hop en su estado mas puro</h4></p>
+                        <p class="card-text ms-auto"><h6>1/3</h6></p>
+                    </div>
+                    <img src="https://img.freepik.com/fotos-gratis/hora-de-dancar-homens-elegantes-e-mulher-dancando-hip-hop-em-roupas-brilhantes-sobre-fundo-verde-no-salao-de-danca-em-luz-de-neon_155003-16406.jpg?w=996&t=st=1714376013~exp=1714376613~hmac=42b81e281bebe2cfdcababd76658d759d47408cab70860123a338d5a3aee24f9"
+                        class="card-img-top" alt="bailarina">
+                    <div class="card-body mt-auto">
+                        <p class="card-text"><strong><h6>205 Likes</h6></strong></p>
+                        <p class="card-text"><h6>Hip Hop es el baile urbano que te da mayor libertad</h6></p>
+                    </div>
+                </div>  
+            </div> 
+            <p></p>     
+            <!-- imagens de grid 1x1 -->
+            <div class="d-flex justify-content-center">
+                <div class="card" style="width: 47rem;">
+                    <div class="card-body d-flex p-3">
+                        <p class="card-text"><h4>Ballet es otro royo</h4></p>
+                        <p class="card-text ms-auto"><h6>2/3</h6></p>
+                    </div>
+                    <img src="https://s2-gshow.glbimg.com/X8xme2IkZqH1WQU8tR0huXxhPew=/0x0:7168x4784/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/s/U/aGbiAxQ3ymjqtY1IrBcw/david-hofmann-xmd4gx8jsxe-unsplash.jpg"
+                        class="card-img-top" alt="bailarina">
+                    <div class="card-body mt-auto">
+                        <p class="card-text"><strong><h6>127 Likes</h6></strong></p>
+                        <p class="card-text"><h6>Una bailarina de ballet mola mucho</h6></p>
+                    </div>
+                </div>  
+            </div>  
+            <p></p>       
+            <!-- imagens de grid 1x1 -->
+            <div class="d-flex justify-content-center">
+                <div class="card" style="width: 47rem;">
+                    <div class="card-body d-flex p-3">
+                        <p class="card-text"><h4>Calientamento de los buenos</h4></p>
+                        <p class="card-text ms-auto"><h6>3/3</h6></p>
+                    </div>
+                    <img src="https://blog.samisaude.com.br/wp-content/uploads/2023/06/people-taking-part-dance-therapy-class-1.jpg"
+                        class="card-img-top" alt="bailarina">
+                    <div class="card-body mt-auto">
+                        <p class="card-text"><strong><h6>308 Likes</h6></strong></p>
+                        <p class="card-text"><h6>Calienta bien tus articulaciones antes de empezares a bailar</h6></p>
+                    </div>
+                </div>  
+            </div>         
         </div>
-      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
